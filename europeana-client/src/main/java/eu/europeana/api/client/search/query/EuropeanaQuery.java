@@ -37,7 +37,7 @@ public class EuropeanaQuery implements EuropeanaQueryInterface, EuropeanaOperato
     private String language;
     private String whatTerms;
     private String profile; 
-    
+    private String reusability;
     /**
      * Creates an empry query
      */
@@ -400,5 +400,13 @@ public class EuropeanaQuery implements EuropeanaQueryInterface, EuropeanaOperato
 
 	public void setProfile(String profile) {
 		this.profile = profile;
+	}
+
+	public String getReusability() {
+		return reusability;
+	}
+
+	public void setReusability(String reusability) {
+		this.reusability = reusability;
 	}
 }

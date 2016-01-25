@@ -33,6 +33,7 @@ public class EuropeanaApi2Item extends CommonMetadata{
     
     protected List<String> year;
     protected List<String> language;
+	protected List<String> country;
     protected List<String> provider;
     protected List<String> dataProvider;
     protected List<String> rights;
@@ -260,6 +261,14 @@ public class EuropeanaApi2Item extends CommonMetadata{
     public void setLanguage(List<String> language) {
         this.language = language;
     }
+    
+    public List<String> getCountry() {
+		return country;
+	}
+
+	public void setCountry(List<String> country) {
+		this.country = country;
+	}
 
     public List<String> getProvider() {
         return provider;
