@@ -48,8 +48,11 @@ public class EuropeanaApi2Item extends CommonMetadata{
     protected Integer completeness;
     
     protected List<String> edmPreview;
+    
+    protected List<String> edmPlaceLongitude;
+    protected List<String> edmPlaceLatitude;
 
-    public EuropeanaApi2Item() {
+	public EuropeanaApi2Item() {
     }
 
     /*
@@ -293,6 +296,23 @@ public class EuropeanaApi2Item extends CommonMetadata{
     public void setRights(List<String> rights) {
         this.rights = rights;
     }
+
+
+    public List<String> getEdmPlaceLongitude() {
+		return edmPlaceLongitude;
+	}
+
+	public void setEdmPlaceLongitude(List<String> edmPlaceLongitude) {
+		this.edmPlaceLongitude = edmPlaceLongitude;
+	}
+
+	public List<String> getEdmPlaceLatitude() {
+		return edmPlaceLatitude;
+	}
+
+	public void setEdmPlaceLatitude(List<String> edmPlaceLatitude) {
+		this.edmPlaceLatitude = edmPlaceLatitude;
+	}
 
    
     /**

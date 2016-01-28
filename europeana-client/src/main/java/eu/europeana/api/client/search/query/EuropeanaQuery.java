@@ -38,6 +38,13 @@ public class EuropeanaQuery implements EuropeanaQueryInterface, EuropeanaOperato
     private String whatTerms;
     private String profile; 
     private String reusability;
+    
+    private String edmPlaceLongitudeMax;
+    private String edmPlaceLatitudeMax;
+    
+    private String edmPlaceLongitudeMin;
+    private String edmPlaceLatitudeMin;
+
     /**
      * Creates an empry query
      */
@@ -270,6 +277,21 @@ public class EuropeanaQuery implements EuropeanaQueryInterface, EuropeanaOperato
         
         if(this.whatTerms != null)
         	this.addSearchField(buf, "what", this.whatTerms, false, false, true);
+	
+        if(this.edmPlaceLongitudeMax!= null)
+        	this.addSearchField(buf, "edmPlaceLongitudeMax", this.edmPlaceLongitudeMax);
+        
+        if(this.edmPlaceLatitudeMax!= null)
+        	this.addSearchField(buf,"edmPlaceLatitudeMax", this.edmPlaceLatitudeMax);
+
+        if(this.edmPlaceLongitudeMin!= null)
+        	this.addSearchField(buf, "edmPlaceLongitudeMin", this.edmPlaceLongitudeMin);
+        
+        if(this.edmPlaceLatitudeMin!= null)
+        	this.addSearchField(buf,"edmPlaceLatitudeMin", this.edmPlaceLatitudeMin);
+
+        
+	
 	}
 
     public String getQueryUrl(EuropeanaConnection connection) throws UnsupportedEncodingException {
@@ -409,4 +431,37 @@ public class EuropeanaQuery implements EuropeanaQueryInterface, EuropeanaOperato
 	public void setReusability(String reusability) {
 		this.reusability = reusability;
 	}
+
+	public String getEdmPlaceLongitudeMax() {
+		return edmPlaceLongitudeMax;
+	}
+
+	public void setEdmPlaceLongitudeMax(String edmPlaceLongitudeMax) {
+		this.edmPlaceLongitudeMax = edmPlaceLongitudeMax;
+	}
+
+	public String getEdmPlaceLatitudeMax() {
+		return edmPlaceLatitudeMax;
+	}
+
+	public void setEdmPlaceLatitudeMax(String edmPlaceLatitudeMax) {
+		this.edmPlaceLatitudeMax = edmPlaceLatitudeMax;
+	}
+
+	public String getEdmPlaceLongitudeMin() {
+		return edmPlaceLongitudeMin;
+	}
+
+	public void setEdmPlaceLongitudeMin(String edmPlaceLongitudeMin) {
+		this.edmPlaceLongitudeMin = edmPlaceLongitudeMin;
+	}
+
+	public String getEdmPlaceLatitudeMin() {
+		return edmPlaceLatitudeMin;
+	}
+
+	public void setEdmPlaceLatitudeMin(String edmPlaceLatitudeMin) {
+		this.edmPlaceLatitudeMin = edmPlaceLatitudeMin;
+	}
+
 }
